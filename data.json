@@ -1,0 +1,60 @@
+{
+  "profiles": [
+    {
+      "id": 1,
+      "name": "Wojciech",
+      "email": "wojciech@poz.pl",
+      "description": "Anaesthesiologist",
+      "likes": 34
+    },
+    {
+      "id": 2,
+      "name": "Maria",
+      "email": "maria@poz.pl",
+      "description": "Radiologist",
+      "likes": 28
+    },
+    {
+      "id": 3,
+      "name": "Anna",
+      "email": "anna@poz.pl",
+      "description": "Surgeon",
+      "likes": 53
+    },
+    {
+      "id": 4,
+      "name": "Anna",
+      "email": "anna@poz.pl",
+      "description": "Surgeon",
+      "likes": 53
+    },
+    {
+      "id": 5,
+      "name": "Anna",
+      "email": "anna@poz.pl",
+      "description": "Surgeon",
+      "likes": 53
+    },
+    {
+      "id": 6,
+      "name": "Anna",
+      "email": "anna@poz.pl",
+      "description": "Surgeon",
+      "likes": 53
+    },
+    {
+      "id": 7,
+      "name": "Anna",
+      "email": "anna@poz.pl",
+      "description": "Surgeon",
+      "likes": 53
+    },
+    {
+      "id": 8,
+      "name": "Anna",
+      "email": "anna@poz.pl",
+      "description": "Surgeon",
+      "likes": 53
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+@use "../src/assets/base.scss";
+@use "../src/assets/styles/variables" as vars;
+
+.app {
+  padding: 1rem 0;
+  margin:0 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: vars.$bg-color;
+
+  &__header {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  &__content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(15rem, 1fr));
+    grid-gap: 1rem;
+  }
+}
