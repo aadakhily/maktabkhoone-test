@@ -11,6 +11,10 @@
   background-color: vars.$bg-color;
 
   &__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 1.25rem;
     margin-bottom: 1rem;
     font-weight: 700 !important;
@@ -22,18 +26,76 @@
     grid-template-columns: repeat(3, minmax(15rem, 1fr));
     grid-gap: 1rem;
   }
+  
+  .search-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+    background-color: vars.$white-color;
+    padding: 0.25rem 1.25rem;
+    box-shadow: vars.$box-shadow-light;
+    border-radius: 0.75rem;
+
+    &__sort {
+      display: flex;
+      align-items: center;
+      justify-self: flex-end;
+    }
+
+    &__input {
+      display: flex;
+      align-items: center;
+      flex-basis: 85%;
+      input {
+        all: unset;
+        padding: 0.5rem 0.75rem;
+        width: 100%;
+      }
+    }
+  }
+
+  .new-profile-btn{
+    all: unset;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.875rem 2rem;
+    margin-left: 0.785rem;
+    border-radius: 0.875rem;
+    color:vars.$white-color;
+    background-color: vars.$primary-color;
+    box-shadow: vars.$box-shadow-light;
+  }
+}
+
+.icon{
+  cursor: pointer;
 }
 
 @media (min-width: vars.$breakpoint-md) and (max-width: vars.$breakpoint-lg) {
   .app {
     margin: 1rem;
-
-    &__header{
+    
+    &__header {
       font-size: 0.875rem;
+      .search-container{
+        width: 100%;
+      }
     }
 
     &__content {
       grid-template-columns: repeat(2, minmax(15rem, 2fr));
+    }
+    
+    .new-profile-btn{
+      padding: 0.5rem 0.75rem;
     }
   }
 }
@@ -41,13 +103,21 @@
 @media (max-width: vars.$breakpoint-md) {
   .app {
     margin: 0 0.75rem;
-
-    &__header{
+    
+    &__header {
       font-size: 0.875rem;
+      .search-container {
+        width: 100%;
+      }
     }
 
     &__content {
       grid-template-columns: repeat(1, minmax(15rem, 1fr));
+    }
+    .new-profile-btn{
+      padding: 0.75rem 0.5rem;
+      font-size: 0.75rem;
+      margin-left: 0.25rem;
     }
   }
 }
