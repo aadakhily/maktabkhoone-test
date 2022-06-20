@@ -3,7 +3,7 @@
 
 .app {
   padding: 1rem 0;
-  margin:0 2rem;
+  margin: 0 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -13,7 +13,7 @@
   &__header {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    font-weight: 700;
+    font-weight: 700 !important;
   }
 
   &__content {
@@ -21,5 +21,33 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(15rem, 1fr));
     grid-gap: 1rem;
+  }
+}
+
+@media (min-width: vars.$breakpoint-md) and (max-width: vars.$breakpoint-lg) {
+  .app {
+    margin: 1rem;
+
+    &__header{
+      font-size: 0.875rem;
+    }
+
+    &__content {
+      grid-template-columns: repeat(2, minmax(15rem, 2fr));
+    }
+  }
+}
+
+@media (max-width: vars.$breakpoint-md) {
+  .app {
+    margin: 0 0.75rem;
+
+    &__header{
+      font-size: 0.875rem;
+    }
+
+    &__content {
+      grid-template-columns: repeat(1, minmax(15rem, 1fr));
+    }
   }
 }
