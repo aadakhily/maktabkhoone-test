@@ -17,19 +17,19 @@
           </div>
         </div>
 
-        <button class="new-profile-btn">New Profile</button>
+        <button class="new-profile-btn" @click="openCreateProfileModal">New Profile</button>
       </div>
     </header>
 
     <main class="app__content">
       <TransitionGroup name="list">
-        <ProfileCart
-          v-for="profile in searchResult"
-          :profile="profile"
-          :key="profile.id"
-        />
+        <ProfileCart v-for="profile in searchResult" :profile="profile" :key="profile.id" />
       </TransitionGroup>
     </main>
+
+    <Modal :show="showModal" @close="closeCreateProfileModal">
+      <CreateProfileForm @submitForm="addNewProfile" />
+    </Modal>
   </div>
 </template>
 
@@ -38,7 +38,9 @@
 import data from "../../data.json";
 
 // components
+import Modal from "@/components/Modal/index.vue";
 import ProfileCart from "@/components/ProfileCard/index.vue";
+import CreateProfileForm from "@/components/CreateProfileForm/index.vue";
 
 // icon components
 import TopArrow from "@/components/icons/TopArrow.vue";
@@ -49,16 +51,19 @@ export default {
   name: "TheApp",
 
   components: {
+    Modal,
     TopArrow,
     SearchIcon,
     BottomArrow,
     ProfileCart,
+    CreateProfileForm,
   },
 
   data() {
     return {
       profiles: [],
       searchInput: "",
+      showModal: true,
     };
   },
 
@@ -73,6 +78,26 @@ export default {
 
     sortDesc() {
       this.profiles.sort((a, b) => b.likes - a.likes);
+    },
+
+    openCreateProfileModal() {
+      this.showModal = true;
+    },
+
+    closeCreateProfileModal() {
+      this.showModal = false;
+    },
+
+    addNewProfile(newProfile) {
+      const uuid = Math.random().toString(36).substring(2, 15);
+
+      this.profiles.push({
+        ...newProfile,
+        id: uuid,
+        likes: 0,
+      });
+
+      this.closeCreateProfileModal()
     },
   },
 

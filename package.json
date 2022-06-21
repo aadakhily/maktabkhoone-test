@@ -8,6 +8,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@vueuse/integrations": "^8.7.4",
+    "async-validator": "^4.2.5",
     "vue": "^3.2.36"
   },
   "devDependencies": {

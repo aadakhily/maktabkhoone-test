@@ -4,56 +4,56 @@
       "id": 1,
       "name": "Wojciech",
       "email": "wojciech@poz.pl",
-      "description": "Anaesthesiologist",
+      "specialisation": "Anaesthesiologist",
       "likes": 34
     },
     {
       "id": 2,
       "name": "Maria",
       "email": "maria@poz.pl",
-      "description": "Radiologist",
+      "specialisation": "Radiologist",
       "likes": 28
     },
     {
       "id": 3,
       "name": "Anna",
       "email": "anna@poz.pl",
-      "description": "Surgeon",
+      "specialisation": "Surgeon",
       "likes": 53
     },
     {
       "id": 4,
       "name": "Anna",
       "email": "anna@poz.pl",
-      "description": "Surgeon",
+      "specialisation": "Surgeon",
       "likes": 10
     },
     {
       "id": 5,
       "name": "Anna",
       "email": "anna@poz.pl",
-      "description": "Surgeon",
+      "specialisation": "Surgeon",
       "likes": 8
     },
     {
       "id": 6,
       "name": "Anna",
       "email": "anna@poz.pl",
-      "description": "Surgeon",
+      "specialisation": "Surgeon",
       "likes": 555
     },
     {
       "id": 7,
       "name": "Amir",
       "email": "anna@poz.pl",
-      "description": "Surgeon",
+      "specialisation": "Surgeon",
       "likes": 1
     },
     {
       "id": 8,
       "name": "Anna",
       "email": "anna@poz.pl",
-      "description": "Surgeon",
+      "specialisation": "Surgeon",
       "likes": 65
     }
   ]

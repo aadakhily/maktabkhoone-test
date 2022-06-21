@@ -14,13 +14,16 @@
           <span class="label">Name: </span>
           {{ profile.name }}
         </h4>
+        
         <span class="profile-card__email">
           <span class="label">Email: </span>
           {{ profile.email }}
         </span>
-        <p class="profile-cart__description">
-          <span class="label"> Description: </span> {{ profile.description }}
+        
+        <p class="profile-cart__Specialisation">
+          <span class="label"> Specialisation: </span>{{ profile.specialisation }}
         </p>
+
         <div class="profile-card__reaction">
           <component
             :is="heartIcon"
@@ -32,6 +35,7 @@
         </div>
       </div>
     </div>
+    
     <div class="profile-card__comment">
       <input
         type="text"
