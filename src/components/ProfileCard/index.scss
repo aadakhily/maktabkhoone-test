@@ -65,20 +65,31 @@
     border-radius: 0.75rem;
     background-color: vars.$gray-light;
     align-items: center;
-    
-    &-input{
-        width: 100%;
-        all: unset;
-        padding: 0.5rem 0.75rem;
+
+    &-input {
+      width: 100%;
+      all: unset;
+      padding: 0.5rem 0.75rem;
     }
 
-    &-button{
-        all: unset;
-        padding: 0.5rem 2rem;
-        border-radius: 0.875rem;
-        background-color: vars.$primary-color;
-        color:vars.$white-color;
-        cursor: pointer;
+    &-button {
+      all: unset;
+      padding: 0.5rem 2rem;
+      border-radius: 0.875rem;
+      background-color: vars.$primary-color;
+      color: vars.$white-color;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: vars.$breakpoint-md) {
+  .profile-card {
+    &__name,
+    &__email,
+    &__description,
+    .label {
+      font-size: 0.875rem;
     }
   }
 }

@@ -79,6 +79,18 @@
   cursor: pointer;
 }
 
+.list-move, 
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s cubic-bezier(.22,.48,.84,.39);
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(3rem);
+}
+
 @media (min-width: vars.$breakpoint-md) and (max-width: vars.$breakpoint-lg) {
   .app {
     margin: 1rem;
@@ -121,3 +133,12 @@
     }
   }
 }
+
+@media (max-width: vars.$breakpoint-sm) {
+  .app .search{
+    width: 75%;
+  }
+}
+
+
+

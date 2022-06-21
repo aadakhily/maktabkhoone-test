@@ -26,35 +26,35 @@
       "name": "Anna",
       "email": "anna@poz.pl",
       "description": "Surgeon",
-      "likes": 53
+      "likes": 10
     },
     {
       "id": 5,
       "name": "Anna",
       "email": "anna@poz.pl",
       "description": "Surgeon",
-      "likes": 53
+      "likes": 8
     },
     {
       "id": 6,
       "name": "Anna",
       "email": "anna@poz.pl",
       "description": "Surgeon",
-      "likes": 53
+      "likes": 555
     },
     {
       "id": 7,
-      "name": "Anna",
+      "name": "Amir",
       "email": "anna@poz.pl",
       "description": "Surgeon",
-      "likes": 53
+      "likes": 1
     },
     {
       "id": 8,
       "name": "Anna",
       "email": "anna@poz.pl",
       "description": "Surgeon",
-      "likes": 53
+      "likes": 65
     }
   ]
 }
