@@ -81,6 +81,7 @@ export default {
   methods: {
     like() {
       this.isLiked = !this.isLiked;
+      this.$emit("like", this.isLiked, this.profile.id);
     },
   },
 };

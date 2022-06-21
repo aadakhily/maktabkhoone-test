@@ -23,7 +23,13 @@
 
     <main class="app__content">
       <TransitionGroup name="list">
-        <ProfileCart v-for="profile in searchResult" :profile="profile" :key="profile.id" />
+        <ProfileCart
+          v-for="profile in searchResult"
+          :profile="profile"
+          :key="profile.id"
+          @like="likeHandler"
+          v-memo="[profile.id, profile.likes]"
+        />
       </TransitionGroup>
     </main>
 
@@ -63,7 +69,7 @@ export default {
     return {
       profiles: [],
       searchInput: "",
-      showModal: true,
+      showModal: false,
     };
   },
 
@@ -97,18 +103,25 @@ export default {
         likes: 0,
       });
 
-      this.closeCreateProfileModal()
+      this.closeCreateProfileModal();
+    },
+
+    likeHandler(isLiked, profileId) {
+      const profile = this.profiles.find((profile) => profile.id === profileId);
+      isLiked ? profile.likes++ : (profile.likes -= 2);
     },
   },
 
   computed: {
     searchResult() {
-      return this.profiles.filter((item) =>
-        item.name.includes(this.searchInput)
-      );
+      return this.profiles.filter((item) => {
+        const searchIput = this.searchInput.toLowerCase();
+        const itemName = item.name.toLowerCase();
+
+        return itemName.includes(searchIput);
+      });
     },
   },
-
   beforeMount() {
     this.fetchData();
   },
